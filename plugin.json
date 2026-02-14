@@ -1,0 +1,21 @@
+{
+  "id": "ai-summary",
+  "name": "AI 文章摘要",
+  "version": "1.0.0",
+  "description": "使用 AI 自动为文章生成摘要，支持 OpenAI 兼容 API",
+  "author": "Noteva Team",
+  "license": "MIT",
+  "requires": {
+    "noteva": ">=0.1.3"
+  },
+  "hooks": {
+    "frontend": ["content_render"],
+    "backend": ["article_after_create", "article_after_delete", "plugin_activate", "plugin_action"]
+  },
+  "permissions": [
+    "network",
+    "storage",
+    "read_articles"
+  ],
+  "settings": true
+}

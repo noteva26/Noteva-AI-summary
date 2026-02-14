@@ -1,0 +1,88 @@
+.ai-summary-box {
+  margin: 0 0 24px 0;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #334155;
+  /* Reset prose styles that may leak in */
+  max-width: none;
+}
+
+.ai-summary-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #0284c7;
+}
+
+.ai-summary-regenerate {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ai-summary-regenerate:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.ai-summary-regenerate:disabled {
+  cursor: wait;
+  opacity: 0.4;
+}
+
+.ai-summary-icon {
+  font-size: 16px;
+}
+
+.ai-summary-content {
+  color: #475569;
+}
+
+/* Dark mode (class-based, compatible with next-themes) */
+.dark .ai-summary-box {
+  background: linear-gradient(135deg, #0c1929 0%, #0f172a 100%);
+  border-color: #1e3a5f;
+  color: #cbd5e1;
+}
+
+.dark .ai-summary-header {
+  color: #38bdf8;
+}
+
+.dark .ai-summary-content {
+  color: #94a3b8;
+}
+
+.dark .ai-summary-regenerate:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Fallback for prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :not(.light) .ai-summary-box {
+    background: linear-gradient(135deg, #0c1929 0%, #0f172a 100%);
+    border-color: #1e3a5f;
+    color: #cbd5e1;
+  }
+
+  :not(.light) .ai-summary-header {
+    color: #38bdf8;
+  }
+
+  :not(.light) .ai-summary-content {
+    color: #94a3b8;
+  }
+}

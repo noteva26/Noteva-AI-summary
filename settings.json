@@ -1,0 +1,79 @@
+{
+  "sections": [
+    {
+      "id": "api",
+      "title": "API 配置",
+      "fields": [
+        {
+          "id": "api_url",
+          "type": "text",
+          "label": "API 地址",
+          "default": "https://api.openai.com/v1/chat/completions",
+          "placeholder": "https://api.openai.com/v1/chat/completions",
+          "description": "兼容 OpenAI 格式的 API 地址",
+          "secret": true
+        },
+        {
+          "id": "api_key",
+          "type": "text",
+          "label": "API Key",
+          "default": "",
+          "placeholder": "sk-...",
+          "description": "API 密钥",
+          "secret": true
+        },
+        {
+          "id": "model",
+          "type": "text",
+          "label": "模型名称",
+          "default": "gpt-4o-mini",
+          "placeholder": "gpt-4o-mini",
+          "description": "使用的模型名称",
+          "secret": true
+        }
+      ]
+    },
+    {
+      "id": "prompt",
+      "title": "提示词配置",
+      "fields": [
+        {
+          "id": "system_prompt",
+          "type": "textarea",
+          "label": "系统提示词",
+          "default": "你是一个文章摘要助手。请用简洁的中文为文章生成一段 100 字以内的摘要，突出核心观点。",
+          "rows": 4
+        },
+        {
+          "id": "max_content_length",
+          "type": "number",
+          "label": "最大输入长度",
+          "default": 3000,
+          "min": 500,
+          "max": 10000,
+          "description": "发送给 AI 的文章内容最大字符数"
+        }
+      ]
+    },
+    {
+      "id": "display",
+      "title": "显示设置",
+      "fields": [
+        {
+          "id": "show_summary",
+          "type": "switch",
+          "label": "显示摘要",
+          "default": true,
+          "description": "在文章页面显示 AI 生成的摘要"
+        },
+        {
+          "id": "summary_label",
+          "type": "text",
+          "label": "摘要标签",
+          "default": "AI 摘要",
+          "placeholder": "AI 摘要"
+        }
+      ]
+    }
+  ]
+}
