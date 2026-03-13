@@ -2,15 +2,27 @@
   "sections": [
     {
       "id": "api",
-      "title": "API 配置",
+      "title": {
+        "zh-CN": "API 配置",
+        "en": "API Configuration",
+        "zh-TW": "API 設定"
+      },
       "fields": [
         {
           "id": "api_url",
           "type": "text",
-          "label": "API 地址",
+          "label": {
+            "zh-CN": "API 地址",
+            "en": "API URL",
+            "zh-TW": "API 位址"
+          },
           "default": "https://api.openai.com/v1/chat/completions",
           "placeholder": "https://api.openai.com/v1/chat/completions",
-          "description": "兼容 OpenAI 格式的 API 地址",
+          "description": {
+            "zh-CN": "兼容 OpenAI 格式的 API 地址",
+            "en": "OpenAI-compatible API endpoint",
+            "zh-TW": "相容 OpenAI 格式的 API 位址"
+          },
           "secret": true
         },
         {
@@ -19,57 +31,101 @@
           "label": "API Key",
           "default": "",
           "placeholder": "sk-...",
-          "description": "API 密钥",
+          "description": {
+            "zh-CN": "API 密钥",
+            "en": "API key",
+            "zh-TW": "API 金鑰"
+          },
           "secret": true
         },
         {
           "id": "model",
           "type": "text",
-          "label": "模型名称",
+          "label": {
+            "zh-CN": "模型名称",
+            "en": "Model",
+            "zh-TW": "模型名稱"
+          },
           "default": "gpt-4o-mini",
           "placeholder": "gpt-4o-mini",
-          "description": "使用的模型名称",
+          "description": {
+            "zh-CN": "使用的模型名称",
+            "en": "Model name to use",
+            "zh-TW": "使用的模型名稱"
+          },
           "secret": true
         }
       ]
     },
     {
       "id": "prompt",
-      "title": "提示词配置",
+      "title": {
+        "zh-CN": "提示词配置",
+        "en": "Prompt Settings",
+        "zh-TW": "提示詞設定"
+      },
       "fields": [
         {
           "id": "system_prompt",
           "type": "textarea",
-          "label": "系统提示词",
+          "label": {
+            "zh-CN": "系统提示词",
+            "en": "System Prompt",
+            "zh-TW": "系統提示詞"
+          },
           "default": "你是一个文章摘要助手。请用简洁的中文为文章生成一段 100 字以内的摘要，突出核心观点。",
           "rows": 4
         },
         {
           "id": "max_content_length",
           "type": "number",
-          "label": "最大输入长度",
+          "label": {
+            "zh-CN": "最大输入长度",
+            "en": "Max Input Length",
+            "zh-TW": "最大輸入長度"
+          },
           "default": 3000,
           "min": 500,
           "max": 10000,
-          "description": "发送给 AI 的文章内容最大字符数"
+          "description": {
+            "zh-CN": "发送给 AI 的文章内容最大字符数",
+            "en": "Max characters of article content sent to AI",
+            "zh-TW": "傳送給 AI 的文章內容最大字元數"
+          }
         }
       ]
     },
     {
       "id": "display",
-      "title": "显示设置",
+      "title": {
+        "zh-CN": "显示设置",
+        "en": "Display Settings",
+        "zh-TW": "顯示設定"
+      },
       "fields": [
         {
           "id": "show_summary",
           "type": "switch",
-          "label": "显示摘要",
+          "label": {
+            "zh-CN": "显示摘要",
+            "en": "Show Summary",
+            "zh-TW": "顯示摘要"
+          },
           "default": true,
-          "description": "在文章页面显示 AI 生成的摘要"
+          "description": {
+            "zh-CN": "在文章页面显示 AI 生成的摘要",
+            "en": "Show AI-generated summary on article pages",
+            "zh-TW": "在文章頁面顯示 AI 產生的摘要"
+          }
         },
         {
           "id": "summary_label",
           "type": "text",
-          "label": "摘要标签",
+          "label": {
+            "zh-CN": "摘要标签",
+            "en": "Summary Label",
+            "zh-TW": "摘要標籤"
+          },
           "default": "AI 摘要",
           "placeholder": "AI 摘要"
         }
